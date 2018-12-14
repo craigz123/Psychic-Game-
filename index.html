@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Psychic-Game</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Links CSS -->
+    <link rel="stylesheet" type="text/css" media="screen" href="Assets/CSS/style.css" />
+    <!-- Link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+   
+</head>
+<body>
+    <div class= "container">
+    <!-- HTML For the text provided/Game Explaination -->
+    <div class= "Introduction">
+        <div class= "row row1">
+            <div class= "col-lg-12">
+            <h1>
+            The Psychic Game
+            </h1>
+        </div>
+    </div>
+        <div class= "row row2">
+            <div class= "col-md-12">
+            <h2>
+        Guess what letter i'm thinking of...
+            </h2>
+            <p id="alert"></p>
+            <p id="play-again"></p>
+            </div>
+
+        </div>
+        
+        <div class="Results">
+            <p>Wins: <span id="wins"></span></p>
+            <p>Losses: <span id="losses"></span></p>
+            <p>Guesses Left: <span id="guesses-left"></span></p>
+            <p>Your guesses so far: <span id="guessed-letters"></span></p>
+        </div>
+
+    </div> 
+<!-- ^^ Closes the Container DIV -->
+
+
+<script src="Assets/JavaScript/game.js">
+    </script>
+</body>
+</html>

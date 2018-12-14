@@ -1,0 +1,34 @@
+html, body {
+    background-color: white;
+    color: black;
+
+}
+
+.container{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.wizard-dancing {
+    padding-top: 20px;
+    padding-right: 40px;
+}
+
+.row1{
+    float: right;
+}
+.row2{
+    margin: 30px;
+    padding: 100px;
+}
+
+.introduction{
+ 
+}
+
+.results{
+    text-align: center;
+}
+
+p{
+
+}
