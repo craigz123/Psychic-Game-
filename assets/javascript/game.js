@@ -14,13 +14,30 @@ document.querySelector("#wins").innerHTML = wins;
 document.querySelector("#losses").innerHTML = losses;
 document.querySelector("#guesses").innerHTML = guessesLeft;
 
-//Game chooses a random letter
+//Program creates a random letter from the lettersArr array
+const randComp = () => {
+    let randLet = Math.floor(Math.random() * 25);
+    randomLetter = lettersArr[randLet];
+    //console.log('random letter', randomLetter);
+ };
+ 
+ //Resets the UI
+ const resetGame = () => {
+    randComp();
+    guessesLeft = 9;
+    playerGuesses = []; 
+    document.querySelector("#guesses").innerHTML = guessesLeft;
+    document.querySelector('#letters-guessed').innerHTML = playerGuesses;
+ };
+
 randComp();
 
+//Key event to play the game and track the number of guesses
 document.addEventListener('keydown', function (event) {
     guessesLeft = guessesLeft - 1;
     userInput = event.key;
 
+//Game conditionals    
     if (userInput === randomLetter) {
         wins = wins + 1
         document.querySelector("#wins").innerHTML = wins;
@@ -38,22 +55,5 @@ document.addEventListener('keydown', function (event) {
         playerGuesses.push(userInput);
         document.querySelector('#letters-guessed').innerHTML = playerGuesses;
     }
-    console.log('user input', userInput);
+    //console.log('user input', userInput);
 });
-
-
-//FUNCTIONS
-const randComp = () => {
-    let randLet = Math.floor(Math.random() * 25);
-    randomLetter = lettersArr[randLet];
-    console.log('random letter', randomLetter);
-};
-
-const resetGame = () => {
-    randComp();
-    guessesLeft = 9;
-    playerGuesses = [];
-
-    document.querySelector("#guesses").innerHTML = guessesLeft;
-    document.querySelector('#letters-guessed').innerHTML = playerGuesses;
-};
